@@ -1,0 +1,87 @@
+<!-- <p>profile works!</p> -->
+<!-- <div>
+<input type="text" id="name" [formControl]="name"> &nbsp;
+<button class="btn btn-primary" (click)="updateName()">Update</button>
+</div>
+{{name.value | json}} -->
+
+<form [formGroup]="profile" (ngSubmit)="profile.valid && submitForm()">
+
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+
+        <div class="alert alert-danger" role="alert" *ngIf="namectr.dirty && namectr.invalid">
+            <!--<span *ngIf="namectr.errors?.['required']">
+                Name field is required!
+            </span>
+            <span *ngIf="namectr.errors?.['minLength']">
+                 Minimum field length {{namectr.errors!['minLength'].requiredLength}} 
+                Not Valid!
+            </span>
+          </div>
+          -->
+            <div *ngIf="namectr.hasError('required')">
+                Name is required
+            </div>
+
+            <div *ngIf="namectr.hasError('minlength')">
+                Name must be atleast {{namectr.errors!['minlength'].requiredLength}}
+            </div>
+
+            <div *ngIf="namectr.hasError('forbidden')">
+                This Name {{namectr.errors!['forbidden']}} is not allowed
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- {{namectr.hasError | json}} -->
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+
+        <div class="alert alert-danger" role="alert" *ngIf="emailctr.dirty && emailctr.invalid">
+            Email field is required!
+        </div>
+    </div>
+
+    <div formArrayName="mobiles" class="no-validation">
+        <button class="btn btn-primary" (click)="addMobile()">Add Mobile</button>
+        <div class="mb-3" *ngFor="let mobile of mobiles.controls;let i=index">
+            <label for="mobile-{{i}}" class="form-label">Mobile</label>
+            <input type="number" class="form-control" id="mobile-{{i}}" [formControlName]="i">
+        </div>
+    </div>
+
+    <div formGroupName="address" class="no-validation">
+        <h3>Address</h3>
+        <div class="mb-3">
+            <label for="street" class="form-label">Street</label>
+            <input type="text" class="form-control" id="street" formControlName="street">
+        </div>
+
+        <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input type="text" class="form-control" id="city" formControlName="city">
+        </div>
+
+        <div class="mb-3">
+            <label for="state" class="form-label">State</label>
+            <input type="text" class="form-control" id="state" formControlName="state">
+        </div>
+
+        <div class="mb-3">
+            <label for="zip" class="form-label">Zip</label>
+            <input type="number" class="form-control" id="zip" formControlName="zip">
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="profile.invalid">Submit</button>
+</form>
+<br>
+<button class="btn btn-primary" (click)="updateForm()">Update</button>
+<br>
+{{profile.value | json}}

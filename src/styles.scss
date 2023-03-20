@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-icons/font/bootstrap-icons.scss';
+
+//#card-img-top{width:20px max-height 20px;} 
+
+.ng-dirty.ng-invalid:not(form):not(.no-validation){
+    border-bottom: 3px solid red;
+}
+
+.ng-dirty.ng-valid:not(form):not(.no-validation){
+    border-bottom: 3px solid green;
+}

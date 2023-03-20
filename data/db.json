@@ -1,0 +1,77 @@
+{
+    "products":[
+   {
+    "image": "assets/iphone.webp",
+    "id": 1,
+    "name": "Iphone",
+    "price": 67000.671,
+    "publishdate": "Mon Feb 13 2023 19:18:39 GMT+0530 (India Standard Time)",
+    "code": "M-11",
+    "rating": 4,
+    "description":
+      "6.1' Screen Size Super Retina XDR display,Emergency SOS,Dual-camera system 12MP Main | Ultra Wide TrueDepth front camera,Up to 19 hours video playbackfootnote,A15 Bionic chip with 4-core GPU."
+  },
+
+  {
+    "image": "assets/tv.jpg",
+    "id": 2,
+    "name": "Tv",
+    "price": 45000.873,
+    "publishdate": "Mon Feb 13 2023 19:18:39 GMT+0530 (India Standard Time)",
+    "code": "M-11",
+    "rating": 4.5,
+    "description":
+      " Screen Size : 32 (80 cm),Resolution: HD Ready (1366x768) | Refresh Rate: 60 hertz,Connectivity: 2 HDMI ports to connect set top box, Blu Ray players, gaming console | 1 USB ports to connect hard drives and other USB devices,Sound : 40 Watts Output."
+     },
+
+  {
+    "image": "assets/vivo.jpg",
+    "id": 3,
+    "name": "Vivo phone",
+    "price": 48000.978,
+    "publishdate": "Mon Feb 13 2023 19:18:39 GMT+0530 (India Standard Time)",
+    "code": "M-11",
+    "rating": 3.5,
+    "description":
+      "8.49 mm thick with a 2.5D slim body and a flat frame,With a 5000 mAh (TYP) large battery, no fear of low battery indication.Overheating protection,Y02 boasts a 16.55cm (6.51-inch)2 Halo FullView™ Display with HD+ (1600 x 720) resolution."
+  },
+
+  {
+    "image": "assets/camera.jpg",
+    "id": 4,
+    "name": "Camera",
+    "price": 68500.766,
+    "publishdate": "Mon Feb 13 2023 19:18:39 GMT+0530 (India Standard Time)",
+    "code": "M-11",
+    "rating": 5,
+    "description":
+      "Color: Black,Cutting-edge technology,Best-in class Performance,Compatible Mountings: Canon Ef-S; Photo Sensor Technology: Size:[Unit:Frames Per Second, Value:Aps-C ], Technology:[Value:Cmos ]; Hardware Interface: Secure Digital."
+  },
+
+  {
+    "image": "assets/washingmachine.jpg",
+    "id": 5,
+    "name": "Washing-Machine",
+    "price": 44400.545,
+    "publishdate": "Mon Feb 13 2023 19:18:39 GMT+0530 (India Standard Time)",
+    "code": "M-11",
+    "rating": 4.7,
+    "description":
+      "Product Type : Front Load,Brand : Lg,Washer Capacity : 7Kg,Spin Speed : 1200 RPM,Color : Middle Black,Height : 850 mm,Width : 550 mm,Depth : 600 mm,Wash Programmes : Cotton, Cotton+, Mix, Easy Care, Allergy Care, Delicate."
+  },
+
+  {
+    "image": "assets/fridge.jpg",
+    "id": 6,
+    "name": "Fridge",
+    "price": 55500.982,
+    "publishdate": "Mon Feb 13 2023 19:18:39 GMT+0530 (India Standard Time)",
+    "code": "M-11",
+    "rating": 4,
+    "description":
+      "Material: PVC vinyl,Size on Wall: 61 CM x 31 CM (46cm x24 cm),Do it yourself. Comes with practice sticker and instructions. Easy to remove without any damage to equipment Suitable for any kind of smooth surface."
+    }
+   
+    ]
+}
+    

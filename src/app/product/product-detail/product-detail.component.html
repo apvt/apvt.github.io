@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-1">
+            <button class="btn btn-primary" (click)="goBack()">BACK</button>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary" (click)="nextItem()">NEXT</button>
+        </div>
+            <div class="col-1">
+                <button class="btn btn-primary" (click)="prevItem()">PREVIOUS</button>
+        </div>
+    </div>
+</div>
+<br>
+
+
+<div *ngIf="products$ | async as product">
+    <h4>Id:{{product.id}}</h4>
+    <h4>Name:{{product.name}}</h4>
+    <h4>Price:{{product.price}}</h4>
+    <h4>PublishDate:{{product.publishdate}}</h4>
+    <h4>Code:{{product.code}}</h4>
+    <h4>Rating:{{product.rating}}</h4>
+    <h4>Description:{{product.description}}</h4>
+    <br>
+    <button class="btn btn-primary mx-5" [routerLink]="['/products',product.id,'review']">REVIEW</button>
+    <button class="btn btn-primary" [routerLink]="['/products',product.id,'specifications']">SPECIFICATIONS</button>
+
+</div>
+<br>
+
+
+<!-- <h2>product details page</h2> -->
+
+<router-outlet></router-outlet>

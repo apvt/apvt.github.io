@@ -1,0 +1,48 @@
+<!-- textbox -->
+<div class="row">
+    <div class="col">
+        <div class="mb-3">
+            <input type="text" class="form-control" [(ngModel)]="filter">
+        </div>
+        <div class="mb-3">
+            <!-- Entered value:{{filter}} -->
+            <input type="checkbox" class="form-check-input" [(ngModel)]="showimage"> Show Image
+        </div>
+    </div>
+</div>
+
+<!-- carts -->
+<!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"> -->
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+    <div *ngFor=" let product of filtered" class="col">
+        <!-- <div *ngFor=" let product of filtered | slice : 0 : 4 " class="col"> -->
+        <div class="card">
+            <div class="d-flex justify-content-center" *ngIf="showimage">
+                <img [src]="product.image" class="card-img-top mt-3" [alt]="product.name" [ngStyle]="imgstyle">
+                <!-- <img src="{{product.image}}" class="card-img-top" alt="..."> -->
+                <!-- <img [src]="product.image" class="card-img-top" [alt]="product.name"
+            [style.width.px]="200" [style.height.px]="200"> -->
+            </div>
+
+            <div class="card-body mb-3">
+                <h5 class="card-title"
+                [routerLink]="['/products',product.id]"
+                [style.cursor]="'pointer'"> {{product.id}}</h5>
+                <strong>{{product.name | uppercase}}</strong>
+                <h4>{{product.price | currency : 'INR' : 'symbol' : '1.0-2'}}</h4>
+                <!-- 'symbol' : 'min before deci,min after deci - max after deci' -->
+                <p class="card-text" [title]="product.description">{{product.description | slice : 0:100}}</p>
+                <p>{{product.publishdate | date : 'dd-MMMM-YYYY hh:mm:ss'}}</p>
+                <p>{{product.code | convert :'/' }}</p>
+                <!-- <p>{{product.rating}}</p> -->
+                <!-- parent to child -->
+                <!-- <p> <app-star [rating]="product.rating" (click)="product.rating=2"></app-star> </p> -->
+                <!-- child to parent -->
+                <p> <app-star [rating]="product.rating" (ratingClick)="onRatingClicked($event)"></app-star> </p>
+                <!-- date :'dd-MM-YYYY','medium',-->
+                <a href="#" class="btn btn-primary" (click)="addtocart($event,product)">Add to cart</a>
+            </div>
+
+        </div>
+    </div>
+</div>
